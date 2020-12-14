@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(https://picsum.photos/900/600);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navmenu{
+    margin-top: 20px;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 250px;
+    border: 5px solid black;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.clock:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.clock:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.num {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+}
+
+.num:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 10px;
+    background-color: black;
+}
+
+.num1 {
+    transform: rotate(30deg);
+}
+
+.num1 div {
+    transform: rotate(-30deg);
+}
+
+.num2 {
+    transform: rotate(60deg);
+}
+
+.num2 div {
+    transform: rotate(-60deg);
+}
+
+.num3 {
+    transform: rotate(90deg);
+}
+
+.num3 div {
+    transform: rotate(-90deg);
+}
+
+.num4 {
+    transform: rotate(120deg);
+}
+
+.num4 div {
+    transform: rotate(-120deg);
+}
+
+.num5 {
+    transform: rotate(150deg);
+}
+
+.num5 div {
+    transform: rotate(-150deg);
+}
+
+.num6 {
+    transform: rotate(180deg);
+}
+
+.num6 div {
+    transform: rotate(-180deg);
+}
+
+.num7 {
+    transform: rotate(210deg);
+}
+
+.num7 div {
+    transform: rotate(-210deg);
+}
+
+.num8 {
+    transform: rotate(240deg);
+}
+
+.num8 div {
+    transform: rotate(-240deg);
+}
+
+.num9 {
+    transform: rotate(270deg);
+}
+
+.num9 div {
+    transform: rotate(-270deg);
+}
+
+.num10 {
+    transform: rotate(300deg);
+}
+
+.num10 div {
+    transform: rotate(-300deg);
+}
+
+.num11 {
+    transform: rotate(330deg);
+}
+
+.num11 div {
+    transform: rotate(-330deg);
+}
+
+.hand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hand div{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+}
+
+.sec{
+    width: 2px;
+    height: 36%;
+}
+.min{
+    width: 4px;
+    height: 32%;
+    border-radius: 3px;
+}
+.hour{
+    width: 7px;
+    height: 24%;
+    border-radius: 5px;
+}
+
+.bitcoin{
+    margin-bottom: 20px;
+}
+ 
+.side-menu{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    opacity: 0%;
+    width: 0;
+    transition-duration: 1s;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+   
+}
+
+#menu-text {
+    display: none;
+    
+}
+
+.side-menu:hover #menu-text{
+    display: inline;
+}
+
+.fa-2x{
+    margin: 5px;
+display: flex;
+color: black;
+}
+
+.digitalClock{
+    display: none;
+}
+
+.date{
+    width: 20%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px 15px 15px 15px ;
+}
+
+/* @media screen and (max-device-width: ) */

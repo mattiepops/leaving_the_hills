@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <title>Date and Time</title>
+</head>
+
+<body>
+
+    <div class="navmenu"><i class="fas fa-arrow-circle-down fa-3x"></i></div>
+    <h1>Welcome to My <s>Cult</s> Meditation Group</h1>
+
+    <h2>Take a deep breath, try to empty your mind and focus on the movement of the clock.</h2>
+
+    <div class="clock">
+
+        <div class="num num1">
+            <div>1</div>
+        </div>
+        <div class="num num2">
+            <div>2</div>
+        </div>
+        <div class="num num3">
+            <div>3</div>
+        </div>
+        <div class="num num4">
+            <div>4</div>
+        </div>
+        <div class="num num5">
+            <div>5</div>
+        </div>
+        <div class="num num6">
+            <div>6</div>
+        </div>
+        <div class="num num7">
+            <div>7</div>
+        </div>
+        <div class="num num8">
+            <div>8</div>
+        </div>
+        <div class="num num9">
+            <div>9</div>
+        </div>
+        <div class="num num10">
+            <div>10</div>
+        </div>
+        <div class="num num11">
+            <div>11</div>
+        </div>
+        <div class="num num12">
+            <div>12</div>
+        </div>
+
+        <div class="hand" id="sec">
+            <div class="sec"></div>
+        </div>
+        <div class="hand" id="min">
+            <div class="min"></div>
+        </div>
+        <div class="hand" id="hour">
+            <div class="hour"></div>
+        </div>
+
+    </div>
+
+    <div class="date"> </div>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary bitcoin" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <i class="fab fa-bitcoin fa-lg"></i> Pay Us Money Please
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Fund our Activities</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p> Running this community costs money, and so does my Ferrari.</p>
+
+                    <p> Our premium members have already given me all their possessions. I need more. </p>
+
+                    <p> Please click that payment link, and become a <strong> Level 1 Lotus Member </strong> of our
+                        <s>cult</s> organisation! </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">PAY PAY PAY</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="side-menu">
+       <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PLahKLy8pQdCM0SiXNn3EfGIXX19QGzUG3"><i class="fas fa-play-circle fa-2x"></i> <span id="menu-text">Singing Lessons</span></a> 
+       <hr>
+       <a target="_blank" href="https://www.youtube.com/watch?v=FuxWRI_tH3Y"><i class="fas fa-music fa-2x"></i> <span id="menu-text"> Dancing Lessons</span></a>
+       <hr> 
+       <a target="_blank" href="https://www.youtube.com/watch?v=zBXMPRG8y08"><i class="fas fa-child fa-2x"></i> <span id="menu-text"> Yoga</span> </a> 
+    </div>
+
+    <div class="digitalClock"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
