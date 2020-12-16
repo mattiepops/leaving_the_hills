@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.resultDiv{
+    border: 1px solid black;
+    min-width: 40%;
+    min-height: 40%;
+}
+
+#result{
+    width: 100%;
+    height: 70%;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
