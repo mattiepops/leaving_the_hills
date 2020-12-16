@@ -40,7 +40,7 @@ let pattern = [
         replace: "<a href='$2'>$1</a>"
     },
     {
-        regex: /\n$/gim,
+        regex: /\n/gim,
         replace: "<br />"
     },
     {

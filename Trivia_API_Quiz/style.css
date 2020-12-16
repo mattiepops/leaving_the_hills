@@ -107,10 +107,15 @@ h3 {
 
 /* Game HTML CSS NOW */
 
+.choice-biggest {
+    display: flex;
+    flex-direction: row;
+}
+
 .choice-container {
     display: flex;
     margin-bottom: 0.5rem;
-    width: 100%;
+    width: 50%;
     font-size: 1.8rem;
     border: 0.1rem solid rgba(86, 165, 235, 0.25);
     background-color: white;
@@ -204,4 +209,8 @@ h3 {
     100%{
         transform: rotate(360deg);
     }
+}
+
+#finalScore{
+    color: #56a5eb;
 }

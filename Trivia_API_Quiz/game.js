@@ -61,10 +61,7 @@ const getNewQuestion = () => {
 
     // if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     //     //go to end page
-    //     game.classList.add('hidden');
-    //     document.body.style.display = "flex";
-    //     document.body.style.flexDirection = "column-reverse";
-    //     end.classList.remove('hidden');
+        
     // }
     // end.classList.add('hidden');
     // document.body.style.display = "flex";
@@ -75,6 +72,13 @@ const getNewQuestion = () => {
 
     //update progress bar 
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`
+    if (progressBarFull.style.width == 100 ||progressBarFull.style.width == "100" + "%"){
+        document.body.style.display = "flex";
+        document.body.style.flexDirection = "column-reverse";
+        end.classList.remove('hidden');
+        document.querySelector("body > div.container.game-container").style.display = "none";
+        document.querySelector("#finalScore").innerHTML = "Your score is: " + score;
+    }
 
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
