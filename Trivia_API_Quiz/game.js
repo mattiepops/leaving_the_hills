@@ -72,9 +72,9 @@ const getNewQuestion = () => {
 
     //update progress bar 
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`
-    if (progressBarFull.style.width == 100 ||progressBarFull.style.width == "100" + "%"){
-        document.body.style.display = "flex";
-        document.body.style.flexDirection = "column-reverse";
+    if (progressBarFull.style.width == 110 ||progressBarFull.style.width == "110" + "%"){
+        // document.body.style.display = "flex";
+        // document.body.style.flexDirection = "column-reverse";
         end.classList.remove('hidden');
         document.querySelector("body > div.container.game-container").style.display = "none";
         document.querySelector("#finalScore").innerHTML = "Your score is: " + score;
