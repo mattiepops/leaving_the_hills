@@ -14,17 +14,17 @@ const bm = document.querySelector('#b-minutes');
 const bs = document.querySelector('#b-seconds');
 
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
     main.classList.remove('hidden');
-loader.classList.add('hidden');
+    loader.classList.add('hidden');
 })
 
 
 
 // store a reference to a timer variable
 
-wm.innerHTML = 25;
-ws.innerHTML = "00";
+wm.innerHTML = 0;
+ws.innerHTML = "05";
 bm.innerHTML = 5;
 bs.innerHTML = "00";
 
@@ -37,7 +37,7 @@ let startTimer;
 start.addEventListener('click', () => {
 
     if (startTimer === undefined) {
-        startTimer = setInterval(timer, 10)
+        startTimer = setInterval(timer, 50)
     } else {
         alert("Timer is already Running")
     }
@@ -46,7 +46,7 @@ start.addEventListener('click', () => {
 stop.addEventListener('click', () => {
 
     stopInterval();
-    
+
 })
 
 reset.addEventListener('click', () => {
@@ -67,19 +67,32 @@ reset.addEventListener('click', () => {
 function timer() {
     // Work timer countdown
     if (ws.innerHTML != 0) {
+        if (wm.innerHTML != 0 && ws.innerHTML < 10) {
+            ws.innerHTML = "0" + ws.innerHTML;
+        }
         ws.innerHTML--;
     } else if (wm.innerHTML != 0 && ws.innerHTML == 0) {
+        if (wm.innerHTML != 0 && ws.innerHTML < 10) {
+            ws.innerHTML = "0" + ws.innerHTML;
+        }
         ws.innerHTML = 59;
         wm.innerHTML--;
     }
 
+
+    // if (wm.innerHTML == 0 && ws.innerHTML == 0 && bs.innerHTML < 10 && bm.innerHTML != 0) {
+
+    //     bs.innerHTML = "0" + bs.innerHTML;
+    // }
+
     // Break Timer Countdown
     if (wm.innerHTML == 0 && ws.innerHTML == 0) {
+
         if (bs.innerHTML != 0) {
             bs.innerHTML--;
         } else if (bm.innerHTML != 0 && bs.innerHTML == 0) {
             bs.innerHTML = 59;
-            bs.innerHTML--;
+            bm.innerHTML--;
         }
     }
 
@@ -98,7 +111,7 @@ function timer() {
 
     // Add long break after 4 cycles
 
-    if(counter.innerHTML % 4 == 0 && counter.innerHTML != 0) {
+    if (counter.innerHTML % 4 == 0 && counter.innerHTML != 0) {
         wm.innerHTML = 25;
         ws.innerHTML = "0";
 
@@ -109,20 +122,19 @@ function timer() {
     }
 
 
-    // add another 0 to the seconds to make it prettier
+    // add another 0 to the break seconds to make it prettier
 
-    // if(ws.innerHTML < 10){
-    //     ws.innerHTML = "0" + ws.innerHTML;
-    // } else if (bs.innerHTML < 10){
-    //     bs.innerHTML = "0" + bs.innerHTML;
-    // }
+
+    if (wm.innerHTML == 0 && ws.innerHTML == 0 && bs.innerHTML < 10 ){
+        bs.innerHTML = "0" + bs.innerHTML;
+    }
 
 
 }
 
 // Stop Timer Function 
 
-function stopInterval(){
+function stopInterval() {
     clearInterval(startTimer);
     startTimer = undefined;
 }

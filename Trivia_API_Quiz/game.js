@@ -68,7 +68,7 @@ const getNewQuestion = () => {
     // document.body.style.flexDirection = "column";
 
     questionCounter++;
-    progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
+    progressText.innerHTML = `Question ${questionCounter}/${MAX_QUESTIONS}`;
 
     //update progress bar 
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`
@@ -83,11 +83,11 @@ const getNewQuestion = () => {
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question
+    question.innerHTML = currentQuestion.question
 
     for (let choice of choices) {
         const number = choice.dataset["number"];
-        choice.innerText = currentQuestion['choice' + number]
+        choice.innerHTML = currentQuestion['choice' + number]
     }
 
     availableQuestions.splice(questionIndex, 1);
@@ -122,7 +122,7 @@ for (let choice of choices) {
 
 const incrementScore = (num) => {
     score += num;
-    scoreText.innerText = score;
+    scoreText.innerHTML = score;
 }
 
 startGame();
